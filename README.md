@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/offline-dino.svg" width="600" alt="Offline dino runner">
+  <img src="assets/offline-dino.svg" width="100%" alt="Offline dino runner">
 </p>
 
 ---
