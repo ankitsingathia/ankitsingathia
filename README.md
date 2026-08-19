@@ -116,19 +116,6 @@ A pandas pipeline handles scaling, missing-value imputation, and encoding; a mul
 
 ---
 
-### GitHub Stats
-
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=ankitsingathia&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&title_color=0969da&icon_color=0969da&border_radius=8" alt="GitHub stats">
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ankitsingathia&layout=compact&hide_border=true&title_color=0969da&border_radius=8&langs_count=8" alt="Top languages">
-</p>
-
-<p align="center">
-  <img height="165" src="https://streak-stats.demolab.com/?user=ankitsingathia&hide_border=true&border_radius=8&ring=0969DA&fire=0969DA&currStreakLabel=0969DA" alt="GitHub streak">
-</p>
-
----
-
 ### Competitive Programming
 
 | Platform | Profile | Highlights |
