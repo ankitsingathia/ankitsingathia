@@ -13,6 +13,10 @@
   <a href="https://www.codechef.com/users/ankitsingathia"><img src="https://img.shields.io/badge/CodeChef-5B4638?style=for-the-badge&logo=codechef&logoColor=white" alt="CodeChef"></a>
 </p>
 
+<p align="center">
+  <img src="assets/offline-dino.svg" width="220" alt="Offline dino runner">
+</p>
+
 ---
 
 ### About
