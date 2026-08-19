@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="165" viewBox="0 0 495 165" role="img" aria-label="GitHub stats for Ankit Singathia">
+  <style>
+    .card { fill: #0d1117; stroke: #30363d; }
+    .title { fill: #58a6ff; font: 600 18px Arial, sans-serif; }
+    .label { fill: #c9d1d9; font: 600 14px Arial, sans-serif; }
+    .value { fill: #8b949e; font: 500 13px Arial, sans-serif; }
+    .icon { fill: #58a6ff; }
+  </style>
+  <rect class="card" x="0.5" y="0.5" width="494" height="164" rx="8"/>
+  <text class="title" x="28" y="34">Ankit's GitHub Stats</text>
+  <g transform="translate(28 58)">
+    <circle class="icon" cx="7" cy="7" r="5"/>
+    <text class="label" x="24" y="12">Public repositories</text>
+    <text class="value" x="210" y="12">profile and project work</text>
+  </g>
+  <g transform="translate(28 88)">
+    <path class="icon" d="M7 0l2.1 4.3 4.7.7-3.4 3.3.8 4.7L7 10.8 2.8 13l.8-4.7L.2 5l4.7-.7z"/>
+    <text class="label" x="24" y="12">Focus</text>
+    <text class="value" x="210" y="12">full-stack, AI/ML, RAG</text>
+  </g>
+  <g transform="translate(28 118)">
+    <rect class="icon" x="1" y="1" width="12" height="12" rx="3"/>
+    <text class="label" x="24" y="12">Coding practice</text>
+    <text class="value" x="210" y="12">1000+ LeetCode problems</text>
+  </g>
+</svg>
