@@ -122,6 +122,10 @@ A pandas pipeline handles scaling, missing-value imputation, and encoding; a mul
   <img height="165" src="assets/github-stats.svg" alt="GitHub stats">
 </p>
 
+<p align="center">
+  <img height="165" src="https://streak-stats.demolab.com?user=ankitsingathia&theme=github-dark-blue&hide_border=true&border_radius=8" alt="Live GitHub streak stats">
+</p>
+
 ---
 
 ### Competitive Programming
