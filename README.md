@@ -137,13 +137,3 @@ A pandas pipeline handles scaling, missing-value imputation, and encoding; a mul
 | **CodeChef** | [ankitsingathia](https://www.codechef.com/users/ankitsingathia) | **3-star** coder |
 
 Also: top 1% in **JEE Mains** out of 1M+ candidates.
-
----
-
-<p align="center">
-  <i>Open to full-time SDE and AI/ML engineering roles starting 2026.</i>
-</p>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=ankitsingathia&label=Profile%20views&color=0969da&style=flat-square" alt="Profile views">
-</p>
