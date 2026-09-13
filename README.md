@@ -120,7 +120,7 @@ A pandas pipeline handles scaling, missing-value imputation, and encoding; a mul
 
 | Platform | Profile | Highlights |
 |---|---|---|
-| **LeetCode** | [AnkitSingahia](https://leetcode.com/u/AnkitSingahia/) | 1000+ problems solved · rating **1790** · arrays, DP, graphs, trees |
+| **LeetCode** | [AnkitSingahia](https://leetcode.com/u/AnkitSingahia/) | 1000+ problems solved · rating **1862** · arrays, DP, graphs, trees |
 | **CodeChef** | [ankitsingathia](https://www.codechef.com/users/ankitsingathia) | **3-star** coder |
 
 Also: top 1% in **JEE Mains** out of 1M+ candidates.
