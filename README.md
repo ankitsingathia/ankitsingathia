@@ -27,7 +27,7 @@ I spent the summer of 2025 at **Bharti Airtel** building a retrieval-augmented s
 
 - Currently going deeper on **LLM application architecture** — RAG pipelines, structured output, evaluation
 - Comfortable across the stack: **React** on the front, **Flask / Node** on the back, **Python + scikit-learn** for the modelling
-- 1000+ problems solved on LeetCode; I like the ones where the naive solution is obvious and the right one isn't
+- 950+ problems solved on LeetCode; I like the ones where the naive solution is obvious and the right one isn't
 
 ---
 
@@ -46,6 +46,21 @@ Built an internal RAG-powered support assistant handling network outage, recharg
 ### Featured Projects
 
 <table>
+<tr>
+<td colspan="2" valign="top">
+
+#### Where the Google Merchandise Store loses its shoppers
+
+`BigQuery SQL` `dbt` `DuckDB` `Python` `SciPy`
+
+Three months of Google's public GA4 data from its own merch store: 4.3M events from 270K people. Before trusting any of it I audited the export and found three tracking faults, including a shipping event that fires with checkout and would have dropped a third of real buyers from the funnel.
+
+The main leak is getting people from products to checkout (14% make it), and it's the same on phones and desktops. Five store sections convert far worse than the rest, worth roughly 685 orders if they caught up, and one product page sends 58% of its visitors to checkout but only 3.6% of them finish. There's no A/B test in the data, so I designed one on the real numbers and checked the statistics with 1,000 fake tests.
+
+[**Code**](https://github.com/ankitsingathia/ga4-product-analytics) · [**Write-up**](https://ankitsingathia.github.io/ga4-product-analytics/docs/readout.html)
+
+</td>
+</tr>
 <tr>
 <td width="50%" valign="top">
 
@@ -105,6 +120,9 @@ A pandas pipeline handles scaling, missing-value imputation, and encoding; a mul
 
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![BigQuery](https://img.shields.io/badge/BigQuery-669DF6?style=flat-square&logo=googlebigquery&logoColor=white)
+![dbt](https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white)
+![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?style=flat-square&logo=duckdb&logoColor=black)
 ![Firebase](https://img.shields.io/badge/Firebase-DD2C00?style=flat-square&logo=firebase&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-FF4438?style=flat-square&logo=redis&logoColor=white)
 ![AWS EC2](https://img.shields.io/badge/AWS_EC2-FF9900?style=flat-square&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xOS4zNSAxMC4wNEE3LjQ5IDcuNDkgMCAwMDEyIDRhNy40OCA3LjQ4IDAgMDAtNi42MyA0LjAzQTUuOTkgNS45OSAwIDAwMCAxNGE2IDYgMCAwMDYgNmgxM2E1IDUgMCAwMC4zNS05Ljk2eiIvPjwvc3ZnPg%3D%3D)
@@ -112,7 +130,7 @@ A pandas pipeline handles scaling, missing-value imputation, and encoding; a mul
 ![Render](https://img.shields.io/badge/Render-000000?style=flat-square&logo=render&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 
-**Focus areas** — RAG · Data Structures & Algorithms · System Design · ML Pipelines · DBMS · Linux
+**Focus areas** — Product Analytics · A/B Testing · RAG · Data Structures & Algorithms · System Design · ML Pipelines · DBMS · Linux
 
 ---
 
@@ -120,7 +138,7 @@ A pandas pipeline handles scaling, missing-value imputation, and encoding; a mul
 
 | Platform | Profile | Highlights |
 |---|---|---|
-| **LeetCode** | [AnkitSingahia](https://leetcode.com/u/AnkitSingahia/) | 1000+ problems solved · rating **1862** · arrays, DP, graphs, trees |
+| **LeetCode** | [AnkitSingahia](https://leetcode.com/u/AnkitSingahia/) | 950+ problems solved · rating **1862** · arrays, DP, graphs, trees |
 | **CodeChef** | [ankitsingathia](https://www.codechef.com/users/ankitsingathia) | **3-star** coder |
 
 Also: top 1% in **JEE Mains** out of 1M+ candidates.
