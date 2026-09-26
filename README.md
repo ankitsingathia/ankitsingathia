@@ -27,7 +27,7 @@ I spent the summer of 2025 at **Bharti Airtel** building a retrieval-augmented s
 
 - Currently going deeper on **LLM application architecture** — RAG pipelines, structured output, evaluation
 - Comfortable across the stack: **React** on the front, **Flask / Node** on the back, **Python + scikit-learn** for the modelling
-- 950+ problems solved on LeetCode; I like the ones where the naive solution is obvious and the right one isn't
+- 1,000+ problems solved on LeetCode; I like the ones where the naive solution is obvious and the right one isn't
 
 ---
 
@@ -79,11 +79,11 @@ Interactive route maps via OpenStreetMap + Leaflet, stop cards enriched from the
 
 #### MDPS — Multiple Disease Prediction
 
-`Python` `Streamlit` `scikit-learn` `pandas`
+`Python` `Streamlit` `scikit-learn` `SQLite`
 
-End-to-end ML app predicting **diabetes, heart disease, and Parkinson's** from clinical parameters. SVM, Logistic Regression, and Random Forest trained and cross-validated per disease, with the best model serialized per module.
+A Streamlit dashboard with **nine screening modules** (diabetes, heart, kidney, liver, cancer and more), a lab report parser, downloadable PDF reports, and bcrypt logins stored in SQLite.
 
-A pandas pipeline handles scaling, missing-value imputation, and encoding; a multi-module Streamlit front end switches between disease models from one sidebar.
+I tested the model files by giving them inputs with a known right answer instead of trusting their metadata. Two have inverted labels and one returns counts instead of probabilities, all written up in the repo. The models are for learning, not for screening real patients.
 
 [**Code**](https://github.com/ankitsingathia/MDPS) · [**Live**](https://lb6qshk8uqrhexvgmuthwy.streamlit.app/)
 
@@ -109,8 +109,6 @@ A pandas pipeline handles scaling, missing-value imputation, and encoding; a mul
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
 ![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=flat-square&logo=socketdotio&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
@@ -118,17 +116,19 @@ A pandas pipeline handles scaling, missing-value imputation, and encoding; a mul
 
 **Data & Infrastructure**
 
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
 ![BigQuery](https://img.shields.io/badge/BigQuery-669DF6?style=flat-square&logo=googlebigquery&logoColor=white)
 ![dbt](https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white)
 ![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?style=flat-square&logo=duckdb&logoColor=black)
 ![Firebase](https://img.shields.io/badge/Firebase-DD2C00?style=flat-square&logo=firebase&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-FF4438?style=flat-square&logo=redis&logoColor=white)
-![AWS EC2](https://img.shields.io/badge/AWS_EC2-FF9900?style=flat-square&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xOS4zNSAxMC4wNEE3LjQ5IDcuNDkgMCAwMDEyIDRhNy40OCA3LjQ4IDAgMDAtNi42MyA0LjAzQTUuOTkgNS45OSAwIDAwMCAxNGE2IDYgMCAwMDYgNmgxM2E1IDUgMCAwMC4zNS05Ljk2eiIvPjwvc3ZnPg%3D%3D)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
 ![Render](https://img.shields.io/badge/Render-000000?style=flat-square&logo=render&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+
+**Used at Bharti Airtel** (internal code, not in these repos)
+
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-FF4438?style=flat-square&logo=redis&logoColor=white)
 
 **Focus areas** — Product Analytics · A/B Testing · RAG · Data Structures & Algorithms · System Design · ML Pipelines · DBMS · Linux
 
@@ -138,7 +138,7 @@ A pandas pipeline handles scaling, missing-value imputation, and encoding; a mul
 
 | Platform | Profile | Highlights |
 |---|---|---|
-| **LeetCode** | [AnkitSingahia](https://leetcode.com/u/AnkitSingahia/) | 950+ problems solved · rating **1862** · arrays, DP, graphs, trees |
-| **CodeChef** | [ankitsingathia](https://www.codechef.com/users/ankitsingathia) | **3-star** coder |
+| **LeetCode** | [AnkitSingahia](https://leetcode.com/u/AnkitSingahia/) | 1,000+ solved (583 medium, 128 hard) · contest rating **1862** · top 6% |
+| **CodeChef** | [ankitsingathia](https://www.codechef.com/users/ankitsingathia) | **3★** · max rating 1656 |
 
 Also: top 1% in **JEE Mains** out of 1M+ candidates.
