@@ -1,8 +1,8 @@
 <h1 align="center">Ankit Singathia</h1>
 
 <p align="center">
-  <b>Full-stack developer · AI/ML engineer in the making</b><br>
-  I build web apps that put language models to work on real problems — grounded, tested, and shipped.
+  <b>Software engineer who works with data</b><br>
+  I build web apps in React and Node, and analyse large public datasets with SQL and Python.
 </p>
 
 <p align="center">
@@ -21,13 +21,14 @@
 
 ### About
 
-Final-year **B.Tech Electronics & Communication** student at **MNIT Jaipur**, graduating 2026.
+**B.Tech Electronics & Communication**, **MNIT Jaipur**, class of 2026.
 
-I spent the summer of 2025 at **Bharti Airtel** building a retrieval-augmented support chatbot, which taught me the difference between a demo that answers and a system that answers *correctly* — schema validation, grounded retrieval, and graceful failure turned out to be most of the work.
+In summer 2025 I interned at **Bharti Airtel** and built a support chatbot that answers from a set of FAQ documents (RAG). Most of the work was not the model itself. It was checking the output, keeping answers tied to the documents, and handling failures.
 
-- Currently going deeper on **LLM application architecture** — RAG pipelines, structured output, evaluation
-- Comfortable across the stack: **React** on the front, **Flask / Node** on the back, **Python + scikit-learn** for the modelling
-- 1,000+ problems solved on LeetCode; I like the ones where the naive solution is obvious and the right one isn't
+- Web apps: **React** on the front end, **Node / Express** on the back end (Flask at Airtel)
+- Data: **SQL** in BigQuery and DuckDB, **Python** with pandas, dashboards in Power BI
+- Systems: C and C++, in [transceiver firmware](https://github.com/ankitsingathia/optilink) and a [C++17 thread pool](https://github.com/ankitsingathia/work-queue)
+- 1,000+ problems solved on LeetCode, contest rating 1862
 
 ---
 
@@ -64,20 +65,20 @@ The main leak is getting people from products to checkout (14% make it), and it'
 <tr>
 <td width="50%" valign="top">
 
-#### Wanderly — AI Trip Planner
+#### Wanderly: AI trip planner
 
-`React` `Gemini API` `Firebase` `Leaflet`
+`React` `Express` `Gemini API` `Firebase` `Leaflet`
 
-Gemini generates day-wise itineraries as **structured JSON** — ordered stops, travel legs, timings, budgets — behind schema validation and retry logic, because LLMs return malformed JSON more often than anyone admits.
+Before calling Gemini, the Express server looks the destination up on OpenStreetMap and puts real nearby places into the prompt. Gemini returns each day's plan as **JSON** (stops, travel legs, timings, budget). The server pulls the JSON out even when the model wraps it in text, fills in any missing field before the UI sees it, and returns a 502 when a reply can't be parsed.
 
-Interactive route maps via OpenStreetMap + Leaflet, stop cards enriched from the Overpass API, Google OAuth through Firebase, and a demo mode that runs on mock data with no credentials.
+Route maps with Leaflet, Google sign-in through Firebase, and a demo mode that needs no keys. The server has unit and API tests that run in CI.
 
 [**Code**](https://github.com/ankitsingathia/tripplanner) · [**Live**](https://tripplanner-jtno.onrender.com/)
 
 </td>
 <td width="50%" valign="top">
 
-#### MDPS — Multiple Disease Prediction
+#### MDPS: multiple disease prediction
 
 `Python` `Streamlit` `scikit-learn` `SQLite`
 
@@ -130,7 +131,7 @@ I tested the model files by giving them inputs with a known right answer instead
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-FF4438?style=flat-square&logo=redis&logoColor=white)
 
-**Focus areas** — Product Analytics · A/B Testing · RAG · Data Structures & Algorithms · System Design · ML Pipelines · DBMS · Linux
+**Focus areas:** Product Analytics · A/B Testing · RAG · Data Structures & Algorithms · System Design · ML Pipelines · DBMS · Linux
 
 ---
 
