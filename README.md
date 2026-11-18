@@ -1,8 +1,8 @@
 <h1 align="center">Ankit Singathia</h1>
 
 <p align="center">
-  <b>Software engineer who works with data</b><br>
-  I build web apps in React and Node, and analyse large public datasets with SQL and Python.
+  <b>Electronics engineer who writes firmware and analyses data</b><br>
+  I write C firmware for ARM Cortex-M, build web apps in React and Node, and analyse large public datasets with SQL and Python.
 </p>
 
 <p align="center">
@@ -21,7 +21,7 @@
 
 - Web apps: **React** on the front end, **Node / Express** on the back end (Flask at Airtel)
 - Data: **SQL** in BigQuery and DuckDB, **Python** with pandas, dbt, Power BI
-- Systems: C and C++ ([C++17 thread pool](https://github.com/ankitsingathia/work-queue))
+- Embedded: C firmware for ARM Cortex-M4 ([OptiLink](https://github.com/ankitsingathia/optilink)), and a [C++17 thread pool](https://github.com/ankitsingathia/work-queue)
 - 1,000+ problems solved on LeetCode, contest rating 1887
 
 ---
@@ -76,6 +76,19 @@ The main leak is getting people from products to checkout (14% make it), and it'
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top">
+
+#### OptiLink: firmware for an optical transceiver
+
+`C11` `ARM Cortex-M4` `CMIS / I2C` `pytest` `GitHub Actions`
+
+Firmware for the controller inside a pluggable optical transceiver. It serves the CMIS memory map to the host over I2C, samples the analog monitors against alarm thresholds with latched, read-to-clear flags, and runs debounced module and per-lane link state machines. The same sources build for a Cortex-M4 (10,368 bytes of flash, 7.9% of 128 KB) and for a desktop host with a simulated HAL on a virtual clock, so 282 C checks and 54 pytest integration tests run in under a second. It has not been run on real silicon, and the README says so.
+
+[**Code**](https://github.com/ankitsingathia/optilink)
+
+</td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 #### Wanderly: AI trip planner
@@ -105,7 +118,8 @@ Rooms where several people edit the same code and run it. Each run goes into a D
 
 ### Tech stack
 
-- **Languages:** Python, SQL, JavaScript, C++, C
+- **Languages:** C, C++, Python, SQL, JavaScript
+- **Embedded:** ARM Cortex-M4, register-level I2C and UART drivers, hardware abstraction layer, arm-none-eabi-gcc, Make, Jenkins
 - **Web:** React, Node.js, Express, Socket.IO, Tailwind CSS
 - **Data:** BigQuery, DuckDB, dbt, pandas, SciPy, Power BI, Excel
 - **AI:** Gemini API, LangChain, FAISS (RAG)
