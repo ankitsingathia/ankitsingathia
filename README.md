@@ -73,7 +73,7 @@ Plants alarm on overall vibration level, which shows that a machine shakes, not 
 
 `YOLOv8` `OpenCV` `Kalman filter` `PyTorch` `ONNX Runtime`
 
-A YOLOv8n fine-tuned on VisDrone, plus SORT and ByteTrack-style trackers written from scratch, with camera-motion compensation from optical flow and RANSAC. On 17 test videos: MOTA 0.231 → 0.633, identity switches down 80%, vehicle count error 24%. ByteTrack's extra pass helps a weak detector and hurts a strong one, and quantising the whole model to int8 broke it.
+A YOLOv8n fine-tuned on VisDrone (mAP@0.5 0.852), plus SORT and ByteTrack-style trackers written from scratch, with camera-motion compensation from optical flow and RANSAC. On 17 test videos: MOTA 0.231 → 0.633, identity switches down 80%, vehicle count error 24%. ByteTrack's extra pass helps a weak detector and hurts a strong one. Quantising the whole model to int8 broke it; keeping the detection head in float fixed it, 1.39× faster on a CPU.
 
 [**Code**](https://github.com/ankitsingathia/uav-vehicle-tracking)
 
