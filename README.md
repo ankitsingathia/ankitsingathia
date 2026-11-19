@@ -1,8 +1,8 @@
 <h1 align="center">Ankit Singathia</h1>
 
 <p align="center">
-  <b>Electronics engineer who writes firmware and analyses data</b><br>
-  I write C firmware for ARM Cortex-M, build web apps in React and Node, and analyse large public datasets with SQL and Python.
+  <b>Electronics engineer building machine learning on sensor data, down to the microcontroller</b><br>
+  Anomaly detection, forecasting and drone video tracking in Python and PyTorch, and C firmware for ARM Cortex-M.
 </p>
 
 <p align="center">
@@ -17,12 +17,16 @@
 
 ### About
 
-**B.Tech Electronics & Communication**, **MNIT Jaipur**, class of 2026. Now a Graduate Engineer Trainee at **Jindal SAW**, where most of my work has turned into data and automation.
+**B.Tech Electronics & Communication**, **MNIT Jaipur**, class of 2026. Now a Graduate Engineer Trainee at **Jindal SAW**, in energy and utilities, where the plant's meters and machines are my daily data.
 
-- Web apps: **React** on the front end, **Node / Express** on the back end (Flask at Airtel)
-- Data: **SQL** in BigQuery and DuckDB, **Python** with pandas, dbt, Power BI
-- Embedded: C firmware for ARM Cortex-M4 ([OptiLink](https://github.com/ankitsingathia/optilink)), and a [C++17 thread pool](https://github.com/ankitsingathia/work-queue)
+- **Machine learning:** anomaly detection, time-series forecasting, object detection and tracking. PyTorch, scikit-learn, YOLOv8, ONNX Runtime
+- **Signal processing:** FFT and envelope analysis of vibration, Kalman filtering, camera-motion estimation with OpenCV
+- **Edge AI:** int8 quantisation; a CNN as a bit-exact C kernel sized for an ARM Cortex-M4
+- **Embedded:** C firmware for ARM Cortex-M4 ([OptiLink](https://github.com/ankitsingathia/optilink)), I2C and UART drivers, a hardware abstraction layer
+- **Data and web:** SQL (BigQuery, DuckDB), pandas, React, Node / Express
 - 1,000+ problems solved on LeetCode, contest rating 1887
+
+Every project below states its baseline, the measured improvement, and where the method still fails.
 
 ---
 
@@ -46,7 +50,64 @@ Built an internal RAG support assistant for network outage, recharge and complai
 
 ### Featured Projects
 
+#### Machine learning and signal processing
+
 <table>
+<tr>
+<td colspan="2" valign="top">
+
+#### IndustrialSense AI: bearing fault early warning, down to the microcontroller
+
+`Python` `PyTorch` `SciPy` `scikit-learn` `ONNX Runtime` `C` `FastAPI` `React`
+
+Plants alarm on overall vibration level, which shows that a machine shakes, not what is failing. On NASA run-to-failure data, a threshold that follows slow drift cut false alarms by 91% (117 → 10) and still caught all 4 bearing failures 49–120 hours ahead. Envelope-spectrum features at the bearing's defect frequencies lifted diagnosis macro-F1 from 0.949 to 0.974. A 1D CNN quantised to int8 runs as a C kernel that matches its reference bit for bit, in 23.9 KB of flash for a Cortex-M4. It also shows where things break: on bearings the model has never seen, a score of 0.997 on a random split falls to at most 0.62.
+
+[**Code**](https://github.com/ankitsingathia/industrialsense-ai)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### Counting vehicles from drone video
+
+`YOLOv8` `OpenCV` `Kalman filter` `PyTorch` `ONNX Runtime`
+
+A YOLOv8n fine-tuned on VisDrone, plus SORT and ByteTrack-style trackers written from scratch, with camera-motion compensation from optical flow and RANSAC. On 17 test videos: MOTA 0.231 → 0.633, identity switches down 80%, vehicle count error 24%. ByteTrack's extra pass helps a weak detector and hurts a strong one, and quantising the whole model to int8 broke it.
+
+[**Code**](https://github.com/ankitsingathia/uav-vehicle-tracking)
+
+</td>
+<td width="50%" valign="top">
+
+#### Steel plant peak demand, an hour ahead
+
+`Python` `scikit-learn` `PyTorch` `conformal prediction`
+
+The R² of 0.998 widely reported on this dataset comes from a leak. An honest forecast reaches 0.93. Conformal upper bounds warned of 77 of 78 limit crossings within the hour (operator rule: 52); acting on them would cut the month's peak from 629 to 436 kW. An LSTM won on average error but did worse on the peaks that set the bill.
+
+[**Code**](https://github.com/ankitsingathia/steel-peak-demand)
+
+</td>
+</tr>
+</table>
+
+#### Embedded, data and web
+
+<table>
+<tr>
+<td colspan="2" valign="top">
+
+#### OptiLink: firmware for an optical transceiver
+
+`C11` `ARM Cortex-M4` `CMIS / I2C` `pytest` `GitHub Actions`
+
+Firmware for the controller inside a pluggable optical transceiver. It serves the CMIS memory map to the host over I2C, samples the analog monitors against alarm thresholds with latched, read-to-clear flags, and runs debounced module and per-lane link state machines. The same sources build for a Cortex-M4 (10,368 bytes of flash, 7.9% of 128 KB) and for a desktop host with a simulated HAL on a virtual clock, so 282 C checks and 54 pytest integration tests run in under a second. It has not been run on real silicon, and the README says so.
+
+[**Code**](https://github.com/ankitsingathia/optilink)
+
+</td>
+</tr>
 <tr>
 <td colspan="2" valign="top">
 
@@ -72,19 +133,6 @@ Three months of Google's public GA4 data: 4.3M events from 270K people. Before t
 The main leak is getting people from products to checkout (14% make it), and it's the same on phones and desktops. Five store sections convert far worse than the rest, worth roughly 685 orders if they caught up. There's no A/B test in the data, so I designed one on the real numbers and checked the statistics with 1,000 simulated tests.
 
 [**Code**](https://github.com/ankitsingathia/ga4-product-analytics) · [**Report**](https://ankitsingathia.github.io/ga4-product-analytics/docs/report.html)
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top">
-
-#### OptiLink: firmware for an optical transceiver
-
-`C11` `ARM Cortex-M4` `CMIS / I2C` `pytest` `GitHub Actions`
-
-Firmware for the controller inside a pluggable optical transceiver. It serves the CMIS memory map to the host over I2C, samples the analog monitors against alarm thresholds with latched, read-to-clear flags, and runs debounced module and per-lane link state machines. The same sources build for a Cortex-M4 (10,368 bytes of flash, 7.9% of 128 KB) and for a desktop host with a simulated HAL on a virtual clock, so 282 C checks and 54 pytest integration tests run in under a second. It has not been run on real silicon, and the README says so.
-
-[**Code**](https://github.com/ankitsingathia/optilink)
 
 </td>
 </tr>
@@ -118,12 +166,13 @@ Rooms where several people edit the same code and run it. Each run goes into a D
 
 ### Tech stack
 
-- **Languages:** C, C++, Python, SQL, JavaScript
+- **Languages:** Python, C, C++, SQL, JavaScript
+- **Machine learning:** PyTorch, scikit-learn, YOLOv8, ONNX Runtime (int8), conformal prediction, py-motmetrics
+- **Signal processing and vision:** NumPy, SciPy (filters, Hilbert, FFT), OpenCV (optical flow, RANSAC), Kalman filters
 - **Embedded:** ARM Cortex-M4, register-level I2C and UART drivers, hardware abstraction layer, arm-none-eabi-gcc, Make, Jenkins
-- **Web:** React, Node.js, Express, Socket.IO, Tailwind CSS
-- **Data:** BigQuery, DuckDB, dbt, pandas, SciPy, Power BI, Excel
-- **AI:** Gemini API, LangChain, FAISS (RAG)
-- **Tools:** Git, GitHub Actions, pytest, Docker, Firebase, Render
+- **Data:** BigQuery, DuckDB, dbt, pandas, Power BI, Excel
+- **Web and AI apps:** React, Node.js, Express, FastAPI, Socket.IO, Gemini API, LangChain, FAISS (RAG)
+- **Tools:** Git, GitHub Actions, pytest, Docker, Linux
 - **At work:** SAP ECC (MM), Excel automation. **At Airtel** (internal code, not in these repos): Flask, MySQL, Redis
 
 ---
